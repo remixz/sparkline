@@ -20,7 +20,7 @@ generateSparkline = (editor) ->
 
   results = []
   push = (num) ->
-    if not isNaN num then results.push ticks[parseInt((num - min) / max)]
+    if not isNaN num then results.push bars[parseInt((num - min) / max)]
 
   push i for i in nums when i isnt ''
   editor.setTextInBufferRange ranges[ranges.length - 1], results.join ''
